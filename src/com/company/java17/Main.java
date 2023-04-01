@@ -35,6 +35,7 @@ class Dog {
         Foot foot = new Foot();
         System.out.println("Создан экземпляр класса foot");
         foot.run();
+        
     }
 
 
