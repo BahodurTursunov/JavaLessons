@@ -1,37 +1,55 @@
 package com.company.java18;
 
-
 public class Main {
-    public static void Main(String[] args) {
-        Dog d = new Dog("Васёк");
-        d.run();
+    public static void main(String[] args) {
+//        Line l1 = new Line();
+//        l1.width = 1;
+//        l1.x1 = 5;
+//        Properties p = l1;
+//        p.color = 5;
+//        p.width = 10;
+//        System.out.println(l1.width);
+        Properties[] geom = new Properties[4];
+        geom[0] = new Line();
+        geom[1] = new Triangle();
+        geom[2] = new Rectangle();
+        geom[3] = new Ellipse();
+
     }
 }
 
-class Dog {
-    private String name;
-    private Foot foot;
+class Geom {
+    int id;
+}
+class Properties extends Geom {
+    int width, color;
 
-    {
-        name = "";
-        foot = new Foot();
-        System.out.println("Создан экземпляр класса foot");
+    Properties() {
+        System.out.println("Конструктор Properties");
     }
+}
 
-    Dog() {
-    }
+class Line extends Properties {
+    double x1, y1;
+    double x2, y2;
 
-    Dog(String name) {
-        this.name = name;
+    Line() {
+        System.out.println("Конструктов Line");
     }
+}
 
-    void run() {
-        foot.run();
-    }
+class Triangle extends Properties {
+    double x1, y1;
+    double x2, y2;
+    double x3, y3;
+}
 
-    class Foot {
-        void run() {
-            System.out.println("Собака " + name + " бежит");
-        }
-    }
+class Rectangle extends Properties {
+    double x1, y1;
+    double x2, y2;
+}
+
+class Ellipse extends Properties {
+    double x1, y1;
+    double x2, y2;
 }
