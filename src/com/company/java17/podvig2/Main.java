@@ -24,6 +24,6 @@ class MusicalInstrument {
         this.type = type;
         this.price = price;
         this.year = year;
-        this.dimensions = new Dimension(width, height, depth);
+        //this.dimensions = new Dimension(width, height, depth);
     }
 }
